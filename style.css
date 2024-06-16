@@ -1,0 +1,60 @@
+* Reset or normalize CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and header styles */
+body {
+    font-family: Arial, sans-serif; /* Optional: Set a font family */
+    line-height: 1.6;
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Container and section styles */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.box {
+    width: 30%; /* Desktop view: Each section takes 30% width */
+    background-color: #fff;
+    border: 1px solid #000;
+    margin-bottom: 20px;
+    position: relative;
+    padding: 20px;
+}
+
+.section-title {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #ffcc00; /* Unique color for section title */
+    padding: 5px;
+    border: 1px solid #000;
+}
+
+/* Responsive layout using media queries */
+@media (max-width: 991px) {
+    .box {
+        width: 48%; /* Tablet view: Each section takes 48% width */
+    }
+    .box:nth-child(3) {
+        width: 100%; /* Tablet view: Third section takes full width */
+    }
+}
+
+@media (max-width: 767px) {
+    .box {
+        width: 100%; /* Mobile view: Each section takes full width */
+    }
+}
